@@ -51,12 +51,7 @@
 											  </div>
 											</div>
 
-											
-
-
-
-
-
+										
 
 											<?php
 											endwhile;

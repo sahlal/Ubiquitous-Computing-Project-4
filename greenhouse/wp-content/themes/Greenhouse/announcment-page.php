@@ -17,7 +17,7 @@ Template Name: announcment-page
 							<div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="jumbotron">
 									<div class="container">
-										<h3>Announcments</h3>
+										<h3 style="text-align:center;">Announcments</h3>
 
 
 										<?php

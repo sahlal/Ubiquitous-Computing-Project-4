@@ -9,37 +9,65 @@ Version: 1
 
 @import url('css/bootstrap.css');
 
+
+
+
+
 #footer{
 margin-top: 40px;
 }
-.plantImage{
-float:left;
-width: 50%
+
+.plantRow{
+margin:auto;
+/*margin-left:30px;*/
+}
+
+.plantRow img{
+	width:90px;
+	height:90px;
+	/*margin-left: 10px;*/
+}
+
+.plantRow p{
+	margin:-3px;
+	font-size: 15px;
+	max-width: 200px;
+}
+
+.plantCol{
+	margin-bottom:30px;
+}
+
+.plantCol .plantButton{
+
+
+white-space: normal;
+min-width: 210px;
+min-height: 176px;
+}
+
+.plantCol .plantButton:hover{
+
+
+background-color: white;
+border-color: green;
 }
 
 
-@media (max-width: 480px){
-	.plantDetails img{
 
-	width:109px;
-	height:85px;
+@media (max-width: 320px){
+
+.plantCol .plantButton{
+
+margin-left:-20px;
 
 }
-.plantDetails{
-clear: both;
-width: 100%;
-}
-
-.plantImage{
-float:left;
 }
 
 
 
-
-
-
-
-
-
+#footer p{
+	color:white;
+	margin-left: 30px;
+	margin-top: 20px;
 }
