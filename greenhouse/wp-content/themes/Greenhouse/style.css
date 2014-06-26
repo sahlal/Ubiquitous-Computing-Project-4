@@ -1,0 +1,45 @@
+/*
+Theme Name: Greenhouse Scanner
+Theme URI: greenhouse.com
+Author: Sahl
+Author URI: greenhouse.com
+Description: Greenhouse Scanner theme
+Version: 1
+*/
+
+@import url('css/bootstrap.css');
+
+#footer{
+margin-top: 40px;
+}
+.plantImage{
+float:left;
+width: 50%
+}
+
+
+@media (max-width: 480px){
+	.plantDetails img{
+
+	width:109px;
+	height:85px;
+
+}
+.plantDetails{
+clear: both;
+width: 100%;
+}
+
+.plantImage{
+float:left;
+}
+
+
+
+
+
+
+
+
+
+}
