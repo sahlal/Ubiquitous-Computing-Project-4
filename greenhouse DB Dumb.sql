@@ -1,7 +1,7 @@
 # WordPress MySQL database migration
 # From http://localhost/greenhouse to http://localhost/greenhouse
 #
-# Generated: Thursday 26. June 2014 16:51 UTC
+# Generated: Thursday 26. June 2014 17:38 UTC
 # Hostname: localhost
 # Database: `greenhouse`
 # --------------------------------------------------------
@@ -319,7 +319,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=855 DEFAULT CHARSET=utf8 ;
+) ENGINE=InnoDB AUTO_INCREMENT=853 DEFAULT CHARSET=utf8 ;
 
 #
 # Data contents of table `wp_postmeta`
@@ -1372,8 +1372,8 @@ INSERT INTO `wp_usermeta` VALUES (37, 3, 'comment_shortcuts', 'false') ;
 INSERT INTO `wp_usermeta` VALUES (38, 3, 'admin_color', 'fresh') ; 
 INSERT INTO `wp_usermeta` VALUES (39, 3, 'use_ssl', '0') ; 
 INSERT INTO `wp_usermeta` VALUES (40, 3, 'show_admin_bar_front', 'true') ; 
-INSERT INTO `wp_usermeta` VALUES (41, 3, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}') ; 
-INSERT INTO `wp_usermeta` VALUES (42, 3, 'wp_user_level', '0') ; 
+INSERT INTO `wp_usermeta` VALUES (41, 3, 'wp_capabilities', 'a:1:{s:13:"administrator";b:1;}') ; 
+INSERT INTO `wp_usermeta` VALUES (42, 3, 'wp_user_level', '10') ; 
 INSERT INTO `wp_usermeta` VALUES (43, 3, 'dismissed_wp_pointers', 'wp350_media,wp360_revisions,wp360_locks,wp390_widgets') ;
 #
 # End of data contents of table `wp_usermeta`
