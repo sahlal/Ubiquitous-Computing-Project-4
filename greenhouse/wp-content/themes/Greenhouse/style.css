@@ -8,6 +8,8 @@ Version: 1
 */
 
 @import url('css/bootstrap.css');
+@import url('css/jasny-bootstrap.min.css');
+
 
 
 
@@ -64,11 +66,24 @@ margin-left:-20px;
 }
 }
 
+#outdiv{
+	margin-left: 15px;
+}
 
 
 .formFields{
 margin-bottom:20px;
 
+}
+
+.searchForm p{
+	margin-left: 15px;
+	margin-top: -20px;
+}
+
+
+#decodedQr{
+	display: none;
 }
 
 

@@ -19,6 +19,7 @@ Template Name: search-page
 					<div class="container">
 						
 						<div class="row">
+
 							
 							<div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="jumbotron">
@@ -27,22 +28,40 @@ Template Name: search-page
 
 
 										<div class="row">
+
+ 
+											<!-- *************** 2 ways to input search, QR or manual search *************** -->
+
+											<div id="main">
+											<div id="mainbody">
+											<div id="outdiv">
+											</div>
+											<div id="result"></div>
+											</div></div>           
+											<canvas id="qr-canvas" width="800" height="600"></canvas> <!--Canvas to draw image -->
+
+											
+
+
 										<!-- Form to get the search term -->
-										<form class="searchForm" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']);?>" method="post" >
+										<form name="searchForm" class="searchForm" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']);?>" method="post" >
+											<p>or</p>
 											<div class="formFields col-xs-12 col-sm-12 col-md-12 col-lg-12">
 												<div class="input-group">
 											<span class="input-group-addon">Search</span>
-											<input class="form-control" name="plantName" type="text" value="Plant Name..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Plant Name...';}">
+											<input class="form-control" name="plantName" id="plantName" type="text" value="Plant Name..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Plant Name...';}">
 											</div>
 											</div>
 
 											<div class="formFields col-xs-12 col-sm-12 col-md-12 col-lg-12">
-											<input class="btn" type="submit" value="Find!" >
+											<input class="btn btn-default" type="submit" value="Find!" >
 										</div>
 										</form>
 									</div>
 
+								
 
+									<!-- ********************************************************************** -->
 
 
 
@@ -94,14 +113,14 @@ Template Name: search-page
 											if(isset($plantName)){
 													
 
+												
 
 
 													if( have_rows('plants') ):
 														while( have_rows('plants') ): the_row();
 
 															similar_text(strtolower(get_sub_field('plant_name')), strtolower($plantName), $percent); 
-															if($percent>90){
-																
+															if($percent>90){																
 																$plantNameDashed = str_replace(" ", "-", get_sub_field('plant_name'));
 																$plantNameDashed = str_replace("'", "", $plantNameDashed);
 																?>
@@ -137,16 +156,20 @@ Template Name: search-page
 																	</div><!-- /.modal -->
 
 
-
 																
 																<?php
 															}
+															
+															
+															
+															
+															
 
 
 														endwhile; 
 													endif;
 
-
+													
 
 
 
@@ -170,7 +193,10 @@ Template Name: search-page
 													
 
 										endwhile;
+
+										
 										?>
+
 
 
 

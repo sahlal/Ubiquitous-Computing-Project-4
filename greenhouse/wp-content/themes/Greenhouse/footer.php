@@ -17,9 +17,15 @@
 
 
        
-         <script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.0.min.js"></script>
+             <script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.0.min.js"></script>
 		     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.js"></script>
+             <script src="<?php bloginfo('template_directory'); ?>/js/jasny-bootstrap.min.js"></script>
 
+             
+         
+             <!-- QR reader scripts -->
+             <script src="<?php bloginfo('template_directory'); ?>/js/llqrcode.js"></script>
+             <script src="<?php bloginfo('template_directory'); ?>/js/webqr.js"></script>
 
          
 
