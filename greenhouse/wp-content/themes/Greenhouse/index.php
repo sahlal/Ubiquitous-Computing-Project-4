@@ -3,7 +3,13 @@
 <?php get_header(); ?>
 
 
+<?php
+include (TEMPLATEPATH . '/php/retrieveStats.php');
 
+
+
+
+?>
 					<!-- content -->
 
 					<div class="container">
@@ -20,7 +26,30 @@
 
 													<?php endwhile; else: ?>
 													<?php endif; ?>
+													
+										
 
+
+													<P><span class="glyphicon glyphicon-stats"></span>           Current Statistics</P>
+												<table class="table table-bordered">
+													        <thead>
+													          <tr>
+													            
+													            <th><span class="glyphicon glyphicon-fire"></span>  Temperature</th>
+													            <th><span class="glyphicon glyphicon-tint"></span>  Humidity</th>
+													            
+													          </tr>
+													        </thead>
+													        <tbody>
+													          <tr>
+													            
+													            <td><?php echo $getCurrentTemperatureResultVal; ?></td>
+													            <td><?php echo $getCurrentHumidityResultVal; ?></td>
+													            
+													          </tr>
+													         
+													        </tbody>
+												</table>
 
 									</div>
 								</div>

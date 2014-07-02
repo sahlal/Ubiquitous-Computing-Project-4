@@ -42,8 +42,8 @@ margin:auto;
 
 
 white-space: normal;
-min-width: 210px;
-min-height: 176px;
+width: 210px;
+height: 176px;
 }
 
 .plantCol .plantButton:hover{
@@ -62,6 +62,13 @@ border-color: green;
 margin-left:-20px;
 
 }
+}
+
+
+
+.formFields{
+margin-bottom:20px;
+
 }
 
 
