@@ -11,6 +11,6 @@ To install:
 
 - import both of the databases (create them first in your local host if you are importing for the first time)
     - WP DB holds WordPress's information
-    - greenhouse-data DB holds information or statistics about the greenhouse
+    - greenhouse-data DB holds information or statistics about the greenhouse (change mySqlConnection inside PHP folder to match your imported database)
 
 Note: you may need to run a find/replace query on WP DB to change the permalinks
