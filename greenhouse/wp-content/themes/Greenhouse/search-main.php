@@ -4,7 +4,7 @@
 
 <?php
 /*
-Template Name: search-main-page
+Template Name: search-page
 */
 ?>
 
@@ -106,7 +106,7 @@ Template Name: search-main-page
 																$plantNameDashed = str_replace("'", "", $plantNameDashed);
 																?>
 
-																		<div class="plantCol col-xs-12 col-sm-12 col-md-12 col-lg-12">
+																		<div class="plantCol col-xs-12 col-sm-6 col-md-3 col-lg-3">
 																			<a class="plantButton btn btn-default"  data-toggle="modal" href='#<?php echo $plantNameDashed; ?>'>
 																			<img  class="img-responsive" src="<?php the_sub_field('plant_image'); ?>">
 																			<p>Name: <?php the_sub_field('plant_name'); ?></p>
