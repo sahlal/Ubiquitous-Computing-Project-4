@@ -73,7 +73,7 @@ include (TEMPLATEPATH . '/php/retrieveStats.php');
 
 											<div class="panel panel-success">
 											  <div class="panel-heading">
-											    <a href="/greenhouse/announcments/"><h3 class="panel-title"><?php the_title(); ?></h3></a>
+											    <a href="../greenhouse/announcments/"><h3 class="panel-title"><?php the_title(); ?></h3></a>
 											  </div>
 											  <div class="panel-body">
 											    <?php echo substr(strip_tags($post->post_content), 0, 10).'...';?>
