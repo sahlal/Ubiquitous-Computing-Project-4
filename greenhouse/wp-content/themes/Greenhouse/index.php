@@ -1,6 +1,6 @@
-
-
-<?php get_header(); ?>
+<?php get_header();
+error_reporting(0);
+ ?>
 
 
 <?php
@@ -76,7 +76,12 @@ include (TEMPLATEPATH . '/php/retrieveStats.php');
 											    <a href="../greenhouse/announcments/"><h3 class="panel-title"><?php the_title(); ?></h3></a>
 											  </div>
 											  <div class="panel-body">
-											    <?php echo substr(strip_tags($post->post_content), 0, 10).'...';?>
+											    <?php 
+//echo substr(strip_tags($post->post_content), 0, 10).'...';
+the_content( ); 
+
+
+?>
 											  </div>
 											</div>
 

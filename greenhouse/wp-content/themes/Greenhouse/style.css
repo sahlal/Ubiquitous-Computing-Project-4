@@ -10,8 +10,9 @@ Version: 1
 @import url('css/bootstrap.css');
 @import url('css/jasny-bootstrap.min.css');
 
-
-
+body{
+    background-image: url('http://localhost/greenhouse/wp-content/uploads/2014/07/awesome-beautiful-dew-drops-nature-wallpaper.jpg');
+}
 
 
 
