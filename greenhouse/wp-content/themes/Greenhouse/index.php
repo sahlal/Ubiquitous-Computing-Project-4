@@ -18,7 +18,7 @@ include (TEMPLATEPATH . '/php/retrieveStats.php');
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 								<div class="jumbotron">
 									<div class="container">
-									<div style="text-align:center; margin-bottom: 27px;"> <img src="../greenhouse/wp-content/uploads/2014/07/logo.jpg" /></div>
+									<div style="text-align:center; margin-bottom: 27px;"> <img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo.jpg" /></div>
 										<div id="head3">Welcome to the  future greenhouse</div>
 
 												<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

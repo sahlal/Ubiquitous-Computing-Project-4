@@ -12,7 +12,6 @@ Version: 1
 
 
 
-
 #footer{
 margin-top: 40px;
 }
@@ -133,8 +132,16 @@ font-size: 15px;
 }
 
 .logo
-{margin-right: 500px;
-margin-bottom: 30px} 
+{
+/*margin-right: 500px;*/
+margin-bottom: 30px;
+width: 176px;
+height: 103px;
+} 
+
+.fPut{
+	margin-left: 15px;
+}
 
 .plantstat
 {
