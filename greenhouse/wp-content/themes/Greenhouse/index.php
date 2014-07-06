@@ -18,7 +18,8 @@ include (TEMPLATEPATH . '/php/retrieveStats.php');
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 								<div class="jumbotron">
 									<div class="container">
-										<h3>General information</h3>
+									<div style="text-align:center; margin-bottom: 27px;"> <img src="../greenhouse/wp-content/uploads/2014/07/logo.jpg" /></div>
+										<div id="head3">Welcome to the  future greenhouse</div>
 
 												<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -30,21 +31,23 @@ include (TEMPLATEPATH . '/php/retrieveStats.php');
 										
 
 
-													<P><span class="glyphicon glyphicon-stats"></span>           Current Statistics</P>
+													<div id="head3"> <span class="glyphicon glyphicon-stats" style="color:black;"></span> 
+														Current Statistics
+													</div>
 												<table class="table table-bordered">
-													        <thead>
+													        <thead >
 													          <tr>
 													            
-													            <th><span class="glyphicon glyphicon-fire"></span>  Temperature</th>
-													            <th><span class="glyphicon glyphicon-tint"></span>  Humidity</th>
+													            <th style="text-align:center"><span class="glyphicon glyphicon-fire"></span>  Temperature</th>
+													            <th style="text-align:center"><span class="glyphicon glyphicon-tint"></span>  Humidity</th>
 													            
 													          </tr>
 													        </thead>
 													        <tbody>
 													          <tr>
 													            
-													            <td><?php echo $getCurrentTemperatureResultVal; ?></td>
-													            <td><?php echo $getCurrentHumidityResultVal; ?></td>
+													            <td style="text-align:center"><?php echo $getCurrentTemperatureResultVal; ?></td>
+													            <td style="text-align:center"><?php echo $getCurrentHumidityResultVal; ?></td>
 													            
 													          </tr>
 													         
@@ -58,7 +61,7 @@ include (TEMPLATEPATH . '/php/retrieveStats.php');
 							<div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
 								<div class="jumbotron">
 									<div class="container">
-										<h3>Announcments</h3>
+										<div id="head3">Announcements</div>
 
 
 										<?php
@@ -71,11 +74,11 @@ include (TEMPLATEPATH . '/php/retrieveStats.php');
 
 
 
-											<div class="panel panel-success">
-											  <div class="panel-heading">
-											    <a href="../greenhouse/announcments/"><h3 class="panel-title"><?php the_title(); ?></h3></a>
+											<div class="panel panel-success" style="background-color: #F5FFEF;border-color: #AEDA8A;">
+											  <div class="panel-heading" style="background-color: #CDFF96;">
+											    <a href="../greenhouse/announcments/"><h3 style="text-decoration:underline; font-size: 13px; color: rgb(83, 158, 146); font-weight: bold;text-align: center;" class="panel-title"><?php the_title(); ?></h3></a>
 											  </div>
-											  <div class="panel-body">
+											  <div id = "panelb" class="panel-body">
 											    <?php 
 //echo substr(strip_tags($post->post_content), 0, 10).'...';
 the_content( ); 
