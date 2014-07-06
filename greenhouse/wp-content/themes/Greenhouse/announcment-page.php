@@ -17,7 +17,7 @@ Template Name: announcment-page
 							<div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="jumbotron">
 									<div class="container">
-										<h3 style="text-align:center;">Announcments</h3>
+										<div id="head3">Announcements</div>
 
 
 										<?php
@@ -30,11 +30,11 @@ Template Name: announcment-page
 
 
 
-											<div class="panel panel-success">
-											  <div class="panel-heading">
-											    <h3 class="panel-title"><?php the_title(); ?></h3>
+											<div class="panel panel-success" style="background-color: #F5FFEF;border-color: #AEDA8A;">
+											  <div class="panel-heading" style="background-color: #CDFF96;">
+											    <h3 class="panel-title" style=" font-size: 13px; color: rgb(83, 158, 146); font-weight: bold;"><?php the_title(); ?></h3>
 											  </div>
-											  <div class="panel-body">
+											  <div id = "panelb" class="panel-body">
 											    <?php the_content();?>
 											  </div>
 											</div>
