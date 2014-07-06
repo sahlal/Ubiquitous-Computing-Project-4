@@ -11,7 +11,8 @@ Version: 1
 @import url('css/jasny-bootstrap.min.css');
 
 body{
-    background-image: url('http://localhost/greenhouse/wp-content/uploads/2014/07/awesome-beautiful-dew-drops-nature-wallpaper.jpg');
+    background-image: url('images/background.jpg');
+    background-size: cover;
 }
 
 
@@ -85,6 +86,10 @@ margin-bottom:20px;
 
 #decodedQr{
 	display: none;
+}
+
+.fPut{
+	margin-left:15px;
 }
 
 

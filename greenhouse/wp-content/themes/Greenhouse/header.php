@@ -11,7 +11,7 @@
   
   <?php wp_head(); ?>
 </head>
-    <body onload="load(); setimg();">
+    <body onload="load();">
 
 
             <!-- navigation bar -->

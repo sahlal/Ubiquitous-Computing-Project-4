@@ -12,6 +12,114 @@ Template Name: search-page
 
 <?php get_header(); ?>
 
+<script type="text/javascript">
+var gCtx = null;
+	var gCanvas = null;
+
+	var imageData = null;
+	var ii=0;
+	var jj=0;
+	var c=0;
+	
+	
+function dragenter(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+
+function dragover(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+function drop(e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  var dt = e.dataTransfer;
+  var files = dt.files;
+
+  handleFiles(files);
+}
+
+function handleFiles(f)
+{
+	var o=[];
+	for(var i =0;i<f.length;i++)
+	{
+	  var reader = new FileReader();
+
+      reader.onload = (function(theFile) {
+        return function(e) {
+          qrcode.decode(e.target.result);
+        };
+      })(f[i]);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f[i]);	}
+}
+	
+function read(a)
+{
+
+	if(a=='error decoding QR Code'){
+		document.getElementById('plantName').value=a;
+	}
+	else{
+	 document.getElementById('plantName').value=a;
+	 document.forms["searchForm"].submit();
+	}
+	
+}	
+	
+function load()
+{
+	initCanvas(1,1);
+	qrcode.callback = read;
+	qrcode.decode("meqrthumb.png");
+}
+
+function initCanvas(ww,hh)
+	{
+		gCanvas = document.getElementById("qr-canvas");
+		gCanvas.addEventListener("dragenter", dragenter, false);  
+		gCanvas.addEventListener("dragover", dragover, false);  
+		gCanvas.addEventListener("drop", drop, false);
+		var w = ww;
+		var h = hh;
+		gCanvas.style.width = w + "px";
+		gCanvas.style.height = h + "px";
+		gCanvas.width = w;
+		gCanvas.height = h;
+		gCtx = gCanvas.getContext("2d");
+		gCtx.clearRect(0, 0, w, h);
+		imageData = gCtx.getImageData( 0,0,320,240);
+	}
+
+	function passLine(stringPixels) { 
+		//a = (intVal >> 24) & 0xff;
+
+		var coll = stringPixels.split("-");
+	
+		for(var i=0;i<320;i++) { 
+			var intVal = parseInt(coll[i]);
+			r = (intVal >> 16) & 0xff;
+			g = (intVal >> 8) & 0xff;
+			b = (intVal ) & 0xff;
+			imageData.data[c+0]=r;
+			imageData.data[c+1]=g;
+			imageData.data[c+2]=b;
+			imageData.data[c+3]=255;
+			c+=4;
+		} 
+
+		if(c>=320*240*4) { 
+			c=0;
+      			gCtx.putImageData(imageData, 0,0);
+		} 
+ 	} 
+
+  
+</script>
 
 
 					<!-- content -->
@@ -32,15 +140,52 @@ Template Name: search-page
  
 											<!-- *************** 2 ways to input search, QR or manual search *************** -->
 
-											<div id="main">
-											<div id="mainbody">
-											<div id="outdiv">
-											</div>
-											<div id="result"></div>
-											</div></div>           
-											<canvas id="qr-canvas" width="800" height="600"></canvas> <!--Canvas to draw image -->
+											 <div class="container">
+	
+
+
+
+
+
+
+
+
+
+
+
+<p>Capture a QR code</p>
+
+  	
+	
+    </div>
+<div class="fileinput fileinput-new" data-provides="fileinput">
+  <span class="fPut btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" accept="image/*;capture=camera" onchange="handleFiles(this.files)"></span>
+  <span class="fileinput-filename"></span>
+  <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+</div><br>
+<canvas id="qr-canvas" width="1" height="1"></canvas>
 
 											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 										<!-- Form to get the search term -->
