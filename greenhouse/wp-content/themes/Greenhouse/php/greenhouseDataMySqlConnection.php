@@ -1,8 +1,8 @@
 		<?php
-		$username="root";
-		$password="root";
-		$dbname="greenhouse-data";
-		$host="localhost";
+		$username="ghamdi";
+		$password="B00537188";
+		$dbname="ghamdi";
+		$host="db.cs.dal.ca";
 		
 		$con=mysqli_connect($host,$username,$password,$dbname);
 		

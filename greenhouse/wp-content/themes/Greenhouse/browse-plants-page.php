@@ -78,6 +78,11 @@ Template Name: browse-plants-page
 																				</div>
 																				<div class="modal-body">
 																					<?php the_sub_field('plant_description'); ?>
+
+																					<br>
+																				<a href="<?php the_sub_field('know_more'); ?>">Resource</a>	
+
+
 																				</div>
 																				<div class="modal-footer">
 																					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
